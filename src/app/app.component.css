@@ -13,6 +13,10 @@
 
 
 /* overwrite children component css*/
+.percentage .percentage-component{
+  margin: 8px;
+}
+
 .percentage .percentage-component__number,
 .percentage .percentage-component__percentage{
    color: green;
