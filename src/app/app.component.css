@@ -1,0 +1,20 @@
+
+.container{
+  width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.amptext{
+  text-align: left;
+}
+
+
+
+/* overwrite children component css*/
+.percentage .percentage-component__number,
+.percentage .percentage-component__percentage{
+   color: green;
+}
+
