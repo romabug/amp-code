@@ -1,13 +1,6 @@
 # InputComponent
 AMP Code Test
-•	accept input number like 0.1333, "0.1333", "13.33%"
-•	number rounding after input
-•	show warning message at console for invalid input into component
-•	work with both template driven forms and reactive forms
-•	it has component unit testing
-•	class naming - BEM( Block Element Modifier)
-•	font size changes to breakpoints/retina-screen within component
-•	able to overwrite children component css from parent component
+ 
 
 ## Development server
 
