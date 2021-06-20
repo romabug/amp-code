@@ -1,22 +1,26 @@
-<div class="container">
-  <div class="template-driven">
-    <h2 class="template-driven__title">template driven form</h2>
-    <form class="template-driven__form" #f="ngForm">
-      <app-input-percentage [decimalPlaces]="1" ngModel name="value"></app-input-percentage>
-      <div class="template-driven__json"><span>decimalPlaces 1  </span> <span>| {{f.value | json}}</span></div>
-    </form>
+<div class="demo-container">
+  <div class="container">
+    <div class="template-driven">
+      <h2 class="template-driven__title">Template Driven Form</h2>
+      <form class="template-driven__form" #f="ngForm">
+        <app-input-percentage [decimalPlaces]="1" ngModel name="value"></app-input-percentage>
+        <div class="template-driven__json"><span>decimalPlaces 1  </span> <span>| {{f.value | json}}</span></div>
+      </form>
+    </div>
   </div>
-</div>
 
 
-<div class="container">
-  <div class="reactive-driven">
-    <h2 class="reactive-driven__title">reactive driven form</h2>
-    <form class="reactive-driven__form" [formGroup]="myForm">
-      <app-input-percentage [decimalPlaces]="2" formControlName="percentage"></app-input-percentage>
-      <div class="reactive-driven__json">
-        <span>decimalPlaces 2  </span> <span>| value: {{myForm.controls.percentage.value }}</span>
-      </div>
-    </form>
+  <div class="container">
+    <div class="reactive-driven">
+      <h2 class="reactive-driven__title">Reactive Driven Form</h2>
+      <form class="reactive-driven__form" [formGroup]="myForm">
+        <app-input-percentage [decimalPlaces]="2" formControlName="percentage"></app-input-percentage>
+        <div class="reactive-driven__json">
+          <span>decimalPlaces 2  </span> <span>| value: {{myForm.controls.percentage.value }}</span>
+        </div>
+      </form>
+    </div>
   </div>
+
 </div>
+

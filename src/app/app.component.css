@@ -1,8 +1,15 @@
+.demo-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
 
 .container{
-  width: 600px;
+  display: inline-block;
+  width: 420px;
   text-align: center;
-  margin: 0 auto;
   margin-top: 60px;
 }
 
