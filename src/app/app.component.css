@@ -3,22 +3,15 @@
   width: 600px;
   text-align: center;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
-.amptext{
-  text-align: left;
+h2{
+  color: dodgerblue;
 }
 
-
-
-/* overwrite children component css*/
-.percentage .percentage-component{
-  margin: 8px;
-}
-
-.percentage .percentage-component__number,
-.percentage .percentage-component__percentage{
-   color: green;
+.template-driven__json, .reactive-driven__json{
+  color: lightgray;
+  margin: 12px 0px;
 }
 

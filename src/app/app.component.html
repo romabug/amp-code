@@ -1,46 +1,22 @@
 <div class="container">
-  <div class="amptext">
-    <h2 class="amptext__title">AMP Code Test</h2>
-    <ul class="amptext__list">
-      <li>accept input number like 0.1333, "0.1333", "13.33%"</li>
-      <li>number rounding after input</li>
-      <li>show warning message at console for invalid input into component</li>
-      <li>work with both template driven forms and reactive forms</li>
-      <li>it has component unit testing</li>
-    </ul>
-    <ul class="amptext__list">
-      <li>class naming - BEM( Block Element Modifier)</li>
-      <li>font size changes to breakpoints/retina-screen within component</li>
-      <li>able to overwrite children component css from parent component</li>
-    </ul>
+  <div class="template-driven">
+    <h2 class="template-driven__title">template driven form</h2>
+    <form class="template-driven__form" #f="ngForm">
+      <app-input-percentage [decimalPlaces]="1" ngModel name="value"></app-input-percentage>
+      <div class="template-driven__json"><span>decimalPlaces 1  </span> <span>| {{f.value | json}}</span></div>
+    </form>
   </div>
 </div>
 
+
 <div class="container">
-
-  <div class="percentage">
-
-    <app-percentage
-      [inputText]=inputValue1.inputText
-      [decimalPlaces]=inputValue1.decimalPlaces
-    ></app-percentage>
-
-    <app-percentage
-      [inputText]=inputValue2.inputText
-      [decimalPlaces]=inputValue2.decimalPlaces
-    ></app-percentage>
-
-    <app-percentage
-      [inputText]=inputValue3.inputText
-      [decimalPlaces]=inputValue3.decimalPlaces
-    ></app-percentage>
-
-    <app-percentage
-      [inputText]=inputValue4.inputText
-      [decimalPlaces]=inputValue4.decimalPlaces
-    ></app-percentage>
-
+  <div class="reactive-driven">
+    <h2 class="reactive-driven__title">reactive driven form</h2>
+    <form class="reactive-driven__form" [formGroup]="myForm">
+      <app-input-percentage [decimalPlaces]="2" formControlName="percentage"></app-input-percentage>
+      <div class="reactive-driven__json">
+        <span>decimalPlaces 2  </span> <span>| value: {{myForm.controls.percentage.value }}</span>
+      </div>
+    </form>
   </div>
-
-
 </div>

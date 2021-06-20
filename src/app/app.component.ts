@@ -1,4 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {FormBuilder, FormGroup} from "@angular/forms";
 
 
 @Component({
@@ -9,36 +10,13 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 })
 
 
-export class AppComponent implements OnInit {
+export class AppComponent {
+  myForm: FormGroup;
 
-  public inputValue1: any = {
-    'inputText': '55.55555%',
-    'decimalPlaces': '1'
-  }
-
-  public inputValue2: any = {
-    'inputText': '0.65555',
-    'decimalPlaces': '2'
-  }
-
-  public inputValue3: any = {
-    'inputText': 0.885555,
-    'decimalPlaces': '3'
-  }
-
-  public inputValue4: any = {
-    'inputText': 0.885555,
-    'decimalPlaces': 2
-  }
-
-
-  ngOnInit() {
-    // comment out this setInterval to remove continual input.
-    setInterval(() => {
-      this.inputValue4.inputText -= 0.001;
-      this.inputValue4.decimalPlaces = Math.floor(Math.random() * 4);
-    }, 1000)
-
+  constructor(private formBuilder: FormBuilder) {
+    this.myForm = this.formBuilder.group({
+      percentage: [null]
+    });
   }
 
 

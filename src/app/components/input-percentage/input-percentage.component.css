@@ -1,0 +1,33 @@
+
+.percentage-component{
+  display: inline-block;
+  width: auto;
+  padding: 8px;
+  outline:1px solid lightgray;
+}
+
+
+.percentage-component__input, .percentage-component__symbol {
+  display: inline;
+  padding: unset;
+  line-height: 24px;
+  font-size: 21px;
+  color: dodgerblue;
+  float: left;
+}
+
+
+.percentage-component__input{
+  width: 124px;
+  color: dodgerblue;
+  text-align: right;
+  border: none;
+}
+
+.percentage-component__input:focus{
+   outline: none;
+}
+
+.percentage-component__symbol{
+  width: 20px;
+}
